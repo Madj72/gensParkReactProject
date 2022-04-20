@@ -6,7 +6,7 @@ import {userLogin} from '../api/authenticationService';
 import {Alert,Spinner} from 'react-bootstrap';
 import Button from '../components/Button.js';
 
-const LoginPage=({loading,error,...props})=>{
+const RegisterPage=({loading,error,...props})=>{
 
 
     const [values, setValues] = useState({
@@ -14,7 +14,7 @@ const LoginPage=({loading,error,...props})=>{
         password: ''
         });
 
-    const handleSubmit=(evt)=>{
+    const handleSubmit= (evt) =>{
         evt.preventDefault();
         props.authenticate();
 
@@ -60,9 +60,10 @@ const LoginPage=({loading,error,...props})=>{
 
     const handleChange = (e) => {
         e.persist();
+
         setValues(values => ({
-        ...values,
-        [e.target.name]: e.target.value
+            ...values,
+            [e.target.name]: e.target.value
         }));
     };
 
@@ -152,4 +153,4 @@ const mapDispatchToProps=(dispatch)=>{
 }
 
 
-export default connect(mapStateToProps,mapDispatchToProps)(LoginPage);
+export default connect(mapStateToProps,mapDispatchToProps)(RegisterPage);

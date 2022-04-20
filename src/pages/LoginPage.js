@@ -116,6 +116,7 @@ const LoginPage=({loading,error,...props})=>{
                                         <Button onclick={handleSubmit} loading={loading} txt={"Login"}/>
                                         {/* <Button onclick={handleSubmit} loading={loading} txt={"Register"}/> */}
                                         <a href="/register" className='register-button'>Register</a>
+                                        <a href="/threads" className='register-button'>Threads</a> {/* TODO remove this, it is temporary to easily access the other parts of the app for prototyping.*/}
                                         
                                     </div>
                                 </div>
