@@ -79,7 +79,7 @@ const LoginPage=({loading,error,...props})=>{
 
                     <div className="card fat">
                         <div className="card-body">
-                            <h4 className="card-title">Login</h4>
+                            <h4 className="card-title">Register</h4>
                             
                             <form className="my-login-validation" onSubmit={handleSubmit} noValidate={false}>
                                 <div className="form-group">
@@ -103,20 +103,10 @@ const LoginPage=({loading,error,...props})=>{
                                     </div>
                                 </div>
 
-                                <div className="form-group">
-                                    <div className="custom-control custom-checkbox">
-                                        <input type="checkbox" className="custom-control-input" id="customCheck1" />
-                                        <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
-                                     </div>
-                                </div>
-                                
-
                                 <div className="buttons">
-                                    <div className="form-group m-1">
-                                        <Button onclick={handleSubmit} loading={loading} txt={"Login"}/>
-                                        {/* <Button onclick={handleSubmit} loading={loading} txt={"Register"}/> */}
-                                        <a href="/register" className='register-button'>Register</a>
-                                        
+                                    <div className="form-group">
+                                        <a href="/" className='register-button'>Back</a>
+                                        <Button className="register-button" onclick={handleSubmit} loading={loading} txt={"Register"}/>
                                     </div>
                                 </div>
                                 {/* <a href="forgot.html" className="float-right">
