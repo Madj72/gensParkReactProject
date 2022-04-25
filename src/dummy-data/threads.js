@@ -1,4 +1,4 @@
-export const threads = {
+const threads = {
 
     1:  { desc:"This is a thread about dogs", username:"user 1" },
     2:  { desc:"Cat lovers get in here NOW", username:"user 2" },

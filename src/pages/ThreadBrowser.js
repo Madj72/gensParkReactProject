@@ -23,11 +23,10 @@ export default class ThreadsBrowser extends React.Component{
     // Creating below function to set state 
     // of this (parent) component.
     setStateOfParent = (mode, t) => {
-        let threads_list = threads.threads;
         this.setState(
             {
                 mode: mode,
-                thread: threads_list[t]
+                thread: t,
             }
         );
     }
@@ -37,7 +36,7 @@ export default class ThreadsBrowser extends React.Component{
             case 'browse':
                 return <ThreadsPageClass setStateOfParent={this.setStateOfParent} mode={this.state.mode}/>
             case 'thread':
-                return <ThreadMain thread={this.state.thread} setStateOfParent={this.setStateOfParent}/>
+                return <ThreadMain id={this.state.thread} setStateOfParent={this.setStateOfParent}/>
             default:
                 return <ThreadsPageClass setStateOfParent={this.setStateOfParent} mode={this.state.mode}/>
         }

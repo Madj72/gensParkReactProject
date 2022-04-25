@@ -11,10 +11,10 @@ export default class ThreadsPageThread extends React.Component {
         this.handleClick.bind(this);
     }
         
-    handleClick = (mode, t) => {
+    handleClick = (mode, id) => {
         // Simply call the setStateOfParent function from 
         // prop and pass required argument
-        this.props.setStateOfParent(mode,t);
+        this.props.setStateOfParent(mode,id);
     }
 
     render(){
